@@ -36,5 +36,24 @@ declare function local:list_games() as element()*
         </html>
 };
 
-local:list_games()
+(:
+Gets the longest game name
+:)
+declare function local:get_longest_name() as xs:string*
+{
+    let $games := fn:json-doc($file_name)?*,
+    $count-chars := function($s, $c) {
+        string-to-codepoints($s)[. eq string-to-codepoints($c)] => count()
+    },
+    $count-chars-insensitive := function($s, $c) {
+        $count-chars(lower-case($s), lower-case($c))
+    },
+    $max-count := $games ! fn:string-length(?name) => max()
+    return $games[fn:string-length(?name) eq $max-count]?name
+};
 
+(:
+local:list_games(),
+:)
+
+local:get_longest_name()

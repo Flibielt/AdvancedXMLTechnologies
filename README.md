@@ -27,8 +27,8 @@ Olympic Track & Field Results [link](https://www.kaggle.com/jayrav13/olympic-tra
 
 ### XML with schema validation
 
-* TODO
-* TODO
+* List the Hungarian results
+* List every athlete, who won a gold medal
 * TODO
 * TODO
 

@@ -12,39 +12,35 @@ declare variable $file_name := "results.json";
 Lists every game with its gender and the URL of the game description from olympic.org
 The results are formatted into a HTML table
 :)
-declare function local:list_games() as element()*
-{
-    let $games := fn:json-doc($file_name)?*
-    return
-        <html>
-            <head>
-                <title>List of games</title>
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-            </head>
-            <table class="table table-bordered table-striped table-hover">
-                <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Game</th>
-                            <th>Gender</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                <tbody>
-                    {
-                    for $game at $i in $games
-                    return
-                        <tr>
-                            <td>{ $i }</td>
-                            <td>{ $game?name }</td>
-                            <td>{ $game?gender }</td>
-                            <td>{ $game?url }</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </html>
-};
-
-local:list_games()
+let $games := fn:json-doc($file_name)?*
+return document {
+    <html>
+        <head>
+            <title>List of games</title>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+        </head>
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Game</th>
+                        <th>Gender</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+            <tbody>
+                {
+                for $game at $i in $games
+                return
+                    <tr>
+                        <td>{ $i }</td>
+                        <td>{ $game?name }</td>
+                        <td>{ $game?gender }</td>
+                        <td>{ $game?url }</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </html>
+}
 

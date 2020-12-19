@@ -29,7 +29,7 @@ Olympic Track & Field Results [link](https://www.kaggle.com/jayrav13/olympic-tra
 
 * List the Hungarian results
 * List every athlete, who won a gold medal
-* TODO
+* List every gold medal by games
 * TODO
 
 ### HTML

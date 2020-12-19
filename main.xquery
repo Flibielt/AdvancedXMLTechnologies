@@ -10,21 +10,25 @@ declare option output:indent "yes";
 
 declare variable $file_name := "results.json";
 
+(:
+Lists every game with its gender and the URL of the game description from olympic.org
+The results are formatted into a HTML table
+:)
 declare function local:list_games() as element()*
 {
-    let $countries := fn:json-doc($file_name)?*
+    let $games := fn:json-doc($file_name)?*
     return
         <html>
             <table>
                 <tbody>
                     {
-                    for $country at $i in $countries
+                    for $game at $i in $games
                     return
                         <tr>
                             <td>{ $i }</td>
-                            <td>{ $country?name }</td>
-                            <td>{ $country?gender }</td>
-                            <td>{ $country?url }</td>
+                            <td>{ $game?name }</td>
+                            <td>{ $game?gender }</td>
+                            <td>{ $game?url }</td>
                         </tr>
                     }
                 </tbody>

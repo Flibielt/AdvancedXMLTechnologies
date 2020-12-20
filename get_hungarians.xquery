@@ -1,6 +1,6 @@
 xquery version "3.1";
 
-import schema default element namespace "" at "hungarians.xsd";
+import schema default element namespace "" at "get_hungarians.xsd";
 
 declare variable $file_name := "results.json";
 

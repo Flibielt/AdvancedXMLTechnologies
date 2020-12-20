@@ -17,8 +17,8 @@ Olympic Track & Field Results [link](https://www.kaggle.com/jayrav13/olympic-tra
 ### One atomic value
 
 * Longest game name
-* TODO
-* TODO
+* The biggest gold count by a single athlete
+* The athlete with the biggest gold count
 
 ### Array or object in JSON
 

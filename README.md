@@ -23,7 +23,7 @@ Olympic Track & Field Results [link](https://www.kaggle.com/jayrav13/olympic-tra
 ### Array or object in JSON
 
 * List of games by gender
-* TODO
+* List of athletes with the count of their gold medal
 
 ### XML with schema validation
 

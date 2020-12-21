@@ -16,6 +16,11 @@ The biggest gold count by a single athlete
 
 let $data := fn:json-doc($file_name)?*,
     $count-golds := function($athlete) { $data?games?*?results?*[?medal eq 'G'][?name eq $athlete] => count()},
+    (:
+    TODO
+    Create function
+    group by
+    :)
     $max-count := $data?games?*?results?*[?medal eq 'G'] ! $count-golds(?name) => max()
 
 return $max-count

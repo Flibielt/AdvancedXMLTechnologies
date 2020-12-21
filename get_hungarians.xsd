@@ -12,9 +12,9 @@
         <xs:complexType mixed="true">
             <xs:sequence>
                 <xs:element name="NAME" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="GENDER" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="GENDER" type="gender" minOccurs="1" maxOccurs="1"/>
                 <xs:element name="LOCATION" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="YEAR" type="xs:int" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="YEAR" type="xs:gYear" minOccurs="1" maxOccurs="1"/>
                 <xs:element name="MEDAL" type="medal"/>
             </xs:sequence>
         </xs:complexType>
@@ -25,6 +25,13 @@
             <xs:enumeration value="B"/>
             <xs:enumeration value="S"/>
             <xs:enumeration value="G"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="gender">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="M"/>
+            <xs:enumeration value="W"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>

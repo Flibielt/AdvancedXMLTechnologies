@@ -18,7 +18,10 @@ return
                 {
                     for $name in $names
                         return <NAME>{ $name }</NAME>
-                                
+                                (:
+                                todo 
+                                more info
+                                :)
                 }
             </WINNERS>
         }

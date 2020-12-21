@@ -16,6 +16,10 @@ The athlete with the biggest gold count
 
 let $data := fn:json-doc($file_name)?*,
     $count-golds := function($athlete) { $data?games?*?results?*[?medal eq 'G'][?name eq $athlete] => count()},
+    (:
+    TODO
+    group by
+    :)
     $max-count := $data?games?*?results?*[?medal eq 'G'] ! $count-golds(?name) => max()
 
 return $data?games?*?results?*[$count-golds(?name) eq $max-count]?name

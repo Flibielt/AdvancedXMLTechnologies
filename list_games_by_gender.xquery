@@ -10,7 +10,12 @@ declare option output:indent "yes";
 
 declare variable $file_name := "results.json";
 
+(:
+List of games by gender
+:)
+
 let $games := json-doc($file_name)?*,
     $genders := distinct-values($games?gender)
+
 return map:merge(for $gender in $genders 
     return map:entry($gender, array{ $games[?gender eq $gender]?name })) => serialize(map{'method': 'json'})

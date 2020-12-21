@@ -10,6 +10,10 @@ declare option output:indent "yes";
 
 declare variable $file_name := "results.json";
 
+(:
+The biggest gold count by a single athlete
+:)
+
 let $data := fn:json-doc($file_name)?*,
     $count-golds := function($athlete) { $data?games?*?results?*[?medal eq 'G'][?name eq $athlete] => count()},
     $max-count := $data?games?*?results?*[?medal eq 'G'] ! $count-golds(?name) => max()

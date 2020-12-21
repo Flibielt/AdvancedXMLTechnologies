@@ -4,6 +4,10 @@ import schema default element namespace "" at "gold_results.xsd";
 
 declare variable $file_name := "results.json";
 
+(:
+List every gold medal by games
+:)
+
 let $data := fn:json-doc($file_name)?*
 
 return 

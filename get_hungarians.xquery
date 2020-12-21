@@ -4,6 +4,10 @@ import schema default element namespace "" at "get_hungarians.xsd";
 
 declare variable $file_name := "results.json";
 
+(:
+List of the Hungarian results
+:)
+
 let $data := fn:json-doc($file_name)?*
 
 return 

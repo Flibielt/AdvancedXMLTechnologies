@@ -10,6 +10,10 @@ declare option output:indent "yes";
 
 declare variable $file_name := "results.json";
 
+(:
+Longest game name
+:)
+
 declare function local:get_longest_name() as xs:string*
 {
     let $games := fn:json-doc($file_name)?*,

@@ -10,6 +10,10 @@ declare option output:indent "yes";
 
 declare variable $file_name := "results.json";
 
+(:
+List of athletes with the count of their gold medal
+:)
+
 let $data := fn:json-doc($file_name)?*,
     $athletes := fn:distinct-values($data?games?*?results?*[?medal eq 'G']?name)
 

@@ -4,6 +4,10 @@ import schema default element namespace "" at "athletes_with_results.xsd";
 
 declare variable $file_name := "results.json";
 
+(:
+List every athlete with his/her results
+:)
+
 let $data := fn:json-doc($file_name)?*,
     $athletes := fn:distinct-values($data?games?*?results?*?name)
 

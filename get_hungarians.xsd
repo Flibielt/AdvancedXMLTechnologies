@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-    <xs:element name="RESULTS">
+    <xs:element name="HUNGARIANS">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="RESULT" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="ATHLETE" minOccurs="1" maxOccurs="unbounded"></xs:element>
             </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="ATHLETE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="RESULT" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="gold" type="xs:nonNegativeInteger" use="required"/>
+            <xs:attribute name="silver" type="xs:nonNegativeInteger" use="required"/>
+            <xs:attribute name="bronze" type="xs:nonNegativeInteger" use="required"/>
         </xs:complexType>
     </xs:element>
     
     <xs:element name="RESULT">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="NAME" type="xs:string" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="GENDER" type="gender" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="GAME" type="xs:string" minOccurs="1" maxOccurs="1"/>
                 <xs:element name="LOCATION" type="xs:string" minOccurs="1" maxOccurs="1"/>
                 <xs:element name="YEAR" type="xs:gYear" minOccurs="1" maxOccurs="1"/>
-                <xs:element name="MEDAL" type="medal"/>
             </xs:sequence>
+            <xs:attribute name="medal" type="medal"/>
         </xs:complexType>
     </xs:element>
     
@@ -27,11 +38,5 @@
             <xs:enumeration value="G"/>
         </xs:restriction>
     </xs:simpleType>
-
-    <xs:simpleType name="gender">
-        <xs:restriction base="xs:token">
-            <xs:enumeration value="M"/>
-            <xs:enumeration value="W"/>
-        </xs:restriction>
-    </xs:simpleType>
+    
 </xs:schema>

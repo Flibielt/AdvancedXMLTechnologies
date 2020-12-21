@@ -1,5 +1,7 @@
 xquery version "3.1";
 
+declare namespace array = "http://www.w3.org/2005/xpath-functions/array";
+
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 
 declare option output:method "html";
@@ -12,6 +14,12 @@ declare variable $file_name := "results.json";
 Lists every game with its gender and the URL of the game description from olympic.org
 The results are formatted into a HTML table
 :)
+
+declare function local:get_medal_count($data, $nationality, $medal) as xs:integer
+{
+    let $count := $data?games?*?results?*[?medal eq $medal][?nationality eq $nationality] => count()
+    return $count
+};
 
 let $data := fn:json-doc($file_name)?*,
     $country-codes := fn:distinct-values($data?games?*?results?*?nationality)
@@ -41,9 +49,9 @@ return document {
             </div>
             <div id="collapse{$country-code}" class="panel-collapse collapse">
                 <div class="panel-body">
-                <p>Gold medals: </p>
-                <p>Silver medals: </p>
-                <p>Bronze medals: </p>
+                <p>Gold medals: {local:get_medal_count($data, $country-code, 'G')}</p>
+                <p>Silver medals: {local:get_medal_count($data, $country-code, 'S')}</p>
+                <p>Bronze medals: {local:get_medal_count($data, $country-code, 'B')}</p>
                 <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
@@ -55,13 +63,28 @@ return document {
                     </tr>
                 </thead>
                     {
-                    for $games in $data
+                    let $current-players := fn:distinct-values(
+                        for $games in $data
+                        return
+                            for $game in $games?games?*
+                            return 
+                                for $result in $game?results?*
+                                where $result?nationality = $country-code
+                                order by $result?name
+                                return $result?name)
+                    
+                    
+                    for $player in $current-players
+                    order by $player
                     return
-                        for $game in $games?games?*
-                        return 
-                            for $result in $game?results?*
-                            where $result?nationality = $country-code
-                            return
+                        for $games in $data
+                        return
+                            for $game in $games?games?*
+                            return 
+                                for $result in $game?results?*
+                                where $result?nationality eq $country-code
+                                where $result?name eq $player
+                                return
                                 <tr>
                                     <td>{$result?name}</td>
                                     <td>{$games?name}</td>

@@ -19,28 +19,34 @@ return document {
             <title>List of games</title>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
         </head>
-        <table class="table table-bordered table-striped table-hover">
-            <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Game</th>
-                        <th>Gender</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-            <tbody>
-                {
-                for $game at $i in $games
-                return
-                    <tr>
-                        <td>{ $i }</td>
-                        <td>{ $game?name }</td>
-                        <td>{ $game?gender }</td>
-                        <td>{ $game?url }</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+        <body>
+            <h1 class="text-center">Olympic Track and Field Games</h1>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th class="text-center">Gender</th>
+                            <th>Game</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    {
+                    for $game at $i in $games
+                    return
+                        <tr>
+                            <td class="text-center">{ $i }.</td>
+                            <td class="text-center">{ $game?gender }</td>
+                            <td>{ $game?name }</td>
+                            <td>
+                                <a href="{$game?url}">{ $game?url }</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </body>
+        
     </html>
 }
 

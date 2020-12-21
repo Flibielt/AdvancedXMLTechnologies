@@ -3,7 +3,7 @@
     <xs:element name="LOCATIONS">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="LOCATION" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="LOCATION" minOccurs="1" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -20,7 +20,7 @@
     <xs:element name="GAME">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="ATHLETE" minOccurs="1" maxOccurs="1"></xs:element>
+                <xs:element ref="ATHLETE" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
             <xs:attribute name="name" type="xs:string" use="required"/>
             <xs:attribute name="year" type="xs:gYear" use="required"/>
@@ -31,8 +31,8 @@
         <xs:complexType>
             <xs:simpleContent>
                 <xs:extension base="xs:string">
-                    <xs:attribute name="nationality" type="nationality" use="required"></xs:attribute>
-                    <xs:attribute name="gender" type="gender" use="required"></xs:attribute>
+                    <xs:attribute name="nationality" type="nationality" use="required"/>
+                    <xs:attribute name="gender" type="gender" use="required"/>
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>

@@ -53,6 +53,6 @@ Olympic Track & Field Results: [link](https://www.kaggle.com/jayrav13/olympic-tr
 
 ### HTML
 
-* List of games with gender and the URL of the game description from olympic.org
+* List of games with gender and the URL of the game description from [olympic.org](olympic.org)
 
     * Query: [list_games_html.xquery](list_games_html.xquery)

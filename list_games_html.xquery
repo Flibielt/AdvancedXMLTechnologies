@@ -11,8 +11,7 @@ declare option output:indent "yes";
 declare variable $file_name := "results.json";
 
 (:
-Lists every game with its gender and the URL of the game description from olympic.org
-The results are formatted into a HTML table
+List countries with its results and medal count in HTML
 :)
 
 declare function local:get_medal_count($data, $nationality, $medal) as xs:integer

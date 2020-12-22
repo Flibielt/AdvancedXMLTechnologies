@@ -1,33 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RESULTS>
-    <RESULT><NAME>JÃ³zsef KOVÃ&#x81;CS</NAME><GENDER>M</GENDER><LOCATION>Melbourne / Stockholm</LOCATION><YEAR>1956</YEAR><MEDAL>S</MEDAL></RESULT>
-    <RESULT><NAME>Alajos SZOKOLYI</NAME><GENDER>M</GENDER><LOCATION>Athens</LOCATION><YEAR>1896</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>IstvÃ¡n RÃ&#x93;ZSAVÃ&#x96;LGYI</NAME><GENDER>M</GENDER><LOCATION>Rome</LOCATION><YEAR>1960</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>SÃ&#x83;Â¡ndor ROZSNYÃ&#x83;?I</NAME><GENDER>M</GENDER><LOCATION>Melbourne / Stockholm</LOCATION><YEAR>1956</YEAR><MEDAL>S</MEDAL></RESULT>
-    <RESULT><NAME/><GENDER>M</GENDER><LOCATION>Helsinki</LOCATION><YEAR>1952</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME/><GENDER>M</GENDER><LOCATION>London</LOCATION><YEAR>1908</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>Antal KISS</NAME><GENDER>M</GENDER><LOCATION>Mexico</LOCATION><YEAR>1968</YEAR><MEDAL>S</MEDAL></RESULT>
-    <RESULT><NAME>Antal RÃ&#x93;KA</NAME><GENDER>M</GENDER><LOCATION>Helsinki</LOCATION><YEAR>1952</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>NÃ¡ndor DÃ&#x81;NI</NAME><GENDER>M</GENDER><LOCATION>Athens</LOCATION><YEAR>1896</YEAR><MEDAL>S</MEDAL></RESULT>
-    <RESULT><NAME>Zoltan KOVAGO</NAME><GENDER>M</GENDER><LOCATION>Athens</LOCATION><YEAR>2004</YEAR><MEDAL>S</MEDAL></RESULT>
-    <RESULT><NAME>Gyula ZSIVÃ&#x93;TZKY</NAME><GENDER>M</GENDER><LOCATION>Rome</LOCATION><YEAR>1960</YEAR><MEDAL>S</MEDAL></RESULT>
-    <RESULT><NAME>JÃ³zsef CSERMÃ&#x81;K</NAME><GENDER>M</GENDER><LOCATION>Helsinki</LOCATION><YEAR>1952</YEAR><MEDAL>G</MEDAL></RESULT>
-    <RESULT><NAME>Imre NÃ&#x89;METH</NAME><GENDER>M</GENDER><LOCATION>Helsinki</LOCATION><YEAR>1952</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>Krisztian PARS</NAME><GENDER>M</GENDER><LOCATION>London</LOCATION><YEAR>2012</YEAR><MEDAL>G</MEDAL></RESULT>
-    <RESULT><NAME>BalÃ¡zs KISS</NAME><GENDER>M</GENDER><LOCATION>Atlanta</LOCATION><YEAR>1996</YEAR><MEDAL>G</MEDAL></RESULT>
-    <RESULT><NAME>Gyula ZSIVÃ&#x93;TZKY</NAME><GENDER>M</GENDER><LOCATION>Tokyo</LOCATION><YEAR>1964</YEAR><MEDAL>S</MEDAL></RESULT>
-    <RESULT><NAME>IstvÃ¡n SOMODI</NAME><GENDER>M</GENDER><LOCATION>London</LOCATION><YEAR>1908</YEAR><MEDAL>S</MEDAL></RESULT>
-    <RESULT><NAME>Lajos GÃ&#x96;NCZY</NAME><GENDER>M</GENDER><LOCATION>Paris</LOCATION><YEAR>1900</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>Miklos NEMETH</NAME><GENDER>M</GENDER><LOCATION>Montreal</LOCATION><YEAR>1976</YEAR><MEDAL>G</MEDAL></RESULT>
-    <RESULT><NAME>Gergely KULCSÃ&#x81;R</NAME><GENDER>M</GENDER><LOCATION>Rome</LOCATION><YEAR>1960</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>Gergely KULCSÃ&#x81;R</NAME><GENDER>M</GENDER><LOCATION>Tokyo</LOCATION><YEAR>1964</YEAR><MEDAL>S</MEDAL></RESULT>
-    <RESULT><NAME>Mor KOVACS</NAME><GENDER>M</GENDER><LOCATION>Stockholm</LOCATION><YEAR>1912</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>Ã&#x83;â&#x80;&#x93;dÃ&#x83;Â¶n FÃ&#x83;â&#x80;&#x93;LDESSY</NAME><GENDER>M</GENDER><LOCATION>Helsinki</LOCATION><YEAR>1952</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>Gyula KELLNER</NAME><GENDER>M</GENDER><LOCATION>Athens</LOCATION><YEAR>1896</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>Vilmos VARJU</NAME><GENDER>M</GENDER><LOCATION>Tokyo</LOCATION><YEAR>1964</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>Jolan KLEIBER-KONTSEK</NAME><GENDER>W</GENDER><LOCATION>Mexico</LOCATION><YEAR>1968</YEAR><MEDAL>B</MEDAL></RESULT>
-    <RESULT><NAME>Ibolya CSÃ&#x81;K</NAME><GENDER>W</GENDER><LOCATION>Berlin</LOCATION><YEAR>1936</YEAR><MEDAL>G</MEDAL></RESULT>
-    <RESULT><NAME>Angela NEMETH</NAME><GENDER>W</GENDER><LOCATION>Mexico</LOCATION><YEAR>1968</YEAR><MEDAL>G</MEDAL></RESULT>
-    <RESULT><NAME>Marta ANTAL-RUDAS</NAME><GENDER>W</GENDER><LOCATION>Tokyo</LOCATION><YEAR>1964</YEAR><MEDAL>S</MEDAL></RESULT>
-    <RESULT><NAME>Anita MARTON</NAME><GENDER>W</GENDER><LOCATION>Rio</LOCATION><YEAR>2016</YEAR><MEDAL>B</MEDAL></RESULT>
-</RESULTS>
+<HUNGARIANS>
+    <ATHLETE name="Alajos SZOKOLYI" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>100M Men</GAME>
+            <LOCATION>Athens</LOCATION>
+            <YEAR>1896</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Angela NEMETH" gold="1" silver="0" bronze="0">
+        <RESULT medal="G">
+            <GAME>Javelin Throw Women</GAME>
+            <LOCATION>Mexico</LOCATION>
+            <YEAR>1968</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Anita MARTON" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>Shot Put Women</GAME>
+            <LOCATION>Rio</LOCATION>
+            <YEAR>2016</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Antal KISS" gold="0" silver="1" bronze="0">
+        <RESULT medal="S">
+            <GAME>50Km Race Walk Men</GAME>
+            <LOCATION>Mexico</LOCATION>
+            <YEAR>1968</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Antal RÃ&#x93;KA" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>50Km Race Walk Men</GAME>
+            <LOCATION>Helsinki</LOCATION>
+            <YEAR>1952</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="BalÃ¡zs KISS" gold="1" silver="0" bronze="0">
+        <RESULT medal="G">
+            <GAME>Hammer Throw Men</GAME>
+            <LOCATION>Atlanta</LOCATION>
+            <YEAR>1996</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Gergely KULCSÃ&#x81;R" gold="0" silver="1" bronze="1">
+        <RESULT medal="B">
+            <GAME>Javelin Throw Men</GAME>
+            <LOCATION>Rome</LOCATION>
+            <YEAR>1960</YEAR>
+        </RESULT>
+        <RESULT medal="S">
+            <GAME>Javelin Throw Men</GAME>
+            <LOCATION>Tokyo</LOCATION>
+            <YEAR>1964</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Gyula KELLNER" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>Marathon Men</GAME>
+            <LOCATION>Athens</LOCATION>
+            <YEAR>1896</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Gyula ZSIVÃ&#x93;TZKY" gold="0" silver="2" bronze="0">
+        <RESULT medal="S">
+            <GAME>Hammer Throw Men</GAME>
+            <LOCATION>Rome</LOCATION>
+            <YEAR>1960</YEAR>
+        </RESULT>
+        <RESULT medal="S">
+            <GAME>Hammer Throw Men</GAME>
+            <LOCATION>Tokyo</LOCATION>
+            <YEAR>1964</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Ibolya CSÃ&#x81;K" gold="1" silver="0" bronze="0">
+        <RESULT medal="G">
+            <GAME>High Jump Women</GAME>
+            <LOCATION>Berlin</LOCATION>
+            <YEAR>1936</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Imre NÃ&#x89;METH" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>Hammer Throw Men</GAME>
+            <LOCATION>Helsinki</LOCATION>
+            <YEAR>1952</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="IstvÃ¡n RÃ&#x93;ZSAVÃ&#x96;LGYI" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>1500M Men</GAME>
+            <LOCATION>Rome</LOCATION>
+            <YEAR>1960</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="IstvÃ¡n SOMODI" gold="0" silver="1" bronze="0">
+        <RESULT medal="S">
+            <GAME>High Jump Men</GAME>
+            <LOCATION>London</LOCATION>
+            <YEAR>1908</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Jolan KLEIBER-KONTSEK" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>Discus Throw Women</GAME>
+            <LOCATION>Mexico</LOCATION>
+            <YEAR>1968</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="JÃ³zsef CSERMÃ&#x81;K" gold="1" silver="0" bronze="0">
+        <RESULT medal="G">
+            <GAME>Hammer Throw Men</GAME>
+            <LOCATION>Helsinki</LOCATION>
+            <YEAR>1952</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="JÃ³zsef KOVÃ&#x81;CS" gold="0" silver="1" bronze="0">
+        <RESULT medal="S">
+            <GAME>10000M Men</GAME>
+            <LOCATION>Melbourne / Stockholm</LOCATION>
+            <YEAR>1956</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Krisztian PARS" gold="1" silver="0" bronze="0">
+        <RESULT medal="G">
+            <GAME>Hammer Throw Men</GAME>
+            <LOCATION>London</LOCATION>
+            <YEAR>2012</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Lajos GÃ&#x96;NCZY" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>High Jump Men</GAME>
+            <LOCATION>Paris</LOCATION>
+            <YEAR>1900</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Marta ANTAL-RUDAS" gold="0" silver="1" bronze="0">
+        <RESULT medal="S">
+            <GAME>Javelin Throw Women</GAME>
+            <LOCATION>Tokyo</LOCATION>
+            <YEAR>1964</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Miklos NEMETH" gold="1" silver="0" bronze="0">
+        <RESULT medal="G">
+            <GAME>Javelin Throw Men</GAME>
+            <LOCATION>Montreal</LOCATION>
+            <YEAR>1976</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Mor KOVACS" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>Javelin Throw Men</GAME>
+            <LOCATION>Stockholm</LOCATION>
+            <YEAR>1912</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="NÃ¡ndor DÃ&#x81;NI" gold="0" silver="1" bronze="0">
+        <RESULT medal="S">
+            <GAME>800M Men</GAME>
+            <LOCATION>Athens</LOCATION>
+            <YEAR>1896</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="SÃ&#x83;Â¡ndor ROZSNYÃ&#x83;?I" gold="0" silver="1" bronze="0">
+        <RESULT medal="S">
+            <GAME>3000M Steeplechase Men</GAME>
+            <LOCATION>Melbourne / Stockholm</LOCATION>
+            <YEAR>1956</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Vilmos VARJU" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>Shot Put Men</GAME>
+            <LOCATION>Tokyo</LOCATION>
+            <YEAR>1964</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Zoltan KOVAGO" gold="0" silver="1" bronze="0">
+        <RESULT medal="S">
+            <GAME>Discus Throw Men</GAME>
+            <LOCATION>Athens</LOCATION>
+            <YEAR>2004</YEAR>
+        </RESULT>
+    </ATHLETE>
+    <ATHLETE name="Ã&#x83;â&#x80;&#x93;dÃ&#x83;Â¶n FÃ&#x83;â&#x80;&#x93;LDESSY" gold="0" silver="0" bronze="1">
+        <RESULT medal="B">
+            <GAME>Long Jump Men</GAME>
+            <LOCATION>Helsinki</LOCATION>
+            <YEAR>1952</YEAR>
+        </RESULT>
+    </ATHLETE>
+</HUNGARIANS>

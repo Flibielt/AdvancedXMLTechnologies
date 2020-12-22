@@ -14,13 +14,14 @@ declare variable $file_name := "results.json";
 The biggest gold count by a single athlete
 :)
 
+declare function local:count-golds($athlete, $data)
+{
+    let $count := $data?games?*?results?*[?medal eq 'G'][?name eq $athlete] => count()
+    
+    return $count
+};
+
 let $data := fn:json-doc($file_name)?*,
-    $count-golds := function($athlete) { $data?games?*?results?*[?medal eq 'G'][?name eq $athlete] => count()},
-    (:
-    TODO
-    Create function
-    group by
-    :)
-    $max-count := $data?games?*?results?*[?medal eq 'G'] ! $count-golds(?name) => max()
+    $max-count := $data?games?*?results?*[?medal eq 'G'] ! local:count-golds(?name, $data) => max()
 
 return $max-count

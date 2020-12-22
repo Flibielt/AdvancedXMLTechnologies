@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="GAMES">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="GAME" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="GAME">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="GENDERS" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="GENDERS">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="WOMEN" minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="MEN" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="WOMEN">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="EVENT" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="MEN">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="EVENT" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="EVENT">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice>
+                    <xs:sequence>
+                        <xs:element ref="ATHLETE" minOccurs="1" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                    
+                    <xs:sequence>
+                        <xs:element ref="TEAM" minOccurs="1" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="location" type="xs:string" use="required"/>
+            <xs:attribute name="year" type="xs:gYear" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="ATHLETE">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="nationality" type="nationality" use="required"/>
+                    <xs:attribute name="medal" type="medal" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="TEAM" type="team"/>
+    
+    <xs:complexType name="team">
+        <xs:attribute name="nationality" type="nationality" use="required"/>
+        <xs:attribute name="medal" type="medal" use="required"/>
+    </xs:complexType>
+    
+    <xs:simpleType name="nationality">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="medal">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="G"/>
+            <xs:enumeration value="S"/>
+            <xs:enumeration value="B"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

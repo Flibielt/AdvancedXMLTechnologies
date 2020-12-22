@@ -1,18 +1,12 @@
 xquery version "3.1";
 
-declare namespace array = "http://www.w3.org/2005/xpath-functions/array";
+import schema default element namespace "" at "games_list.xsd";
 
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 
 (:
 List every game type then within the games list by genders and locations
 :)
-
-declare function local:format-name($game, $gender)
-{
-    let $result := fn:replace($game, ' ', '_') || $gender
-    return $result
-};
 
 declare function local:get-results($data, $game-name, $gender)
 {
@@ -29,7 +23,6 @@ declare function local:get-results($data, $game-name, $gender)
             {
                 for $result in $game?results?*
                 where $games?gender = $gender
-                order by $result?name
                 return 
                     if (fn:empty($result?name))
                     then <TEAM nationality="{$result?nationality}" medal="{$result?medal}"/>
@@ -50,22 +43,31 @@ let $game-names := (
     order by $game-name
     return $game-name)
 
-for $game-name in $game-names
-return 
-    <game name="{$game-name}">
-    {
-        <genders>
-        <WOMEN>
+return
+    validate {
+        document {
+        <GAMES>
         {
-            local:get-results($data, $game-name, 'W')
+            for $game-name in $game-names
+            return 
+                <GAME name="{$game-name}">
+                {
+                    <GENDERS>
+                    <WOMEN>
+                    {
+                        local:get-results($data, $game-name, 'W')
+                    }
+                    </WOMEN>
+                    <MEN>
+                    {
+                        local:get-results($data, $game-name, 'M') 
+                    }
+                    </MEN>
+                    </GENDERS>
+                    
+                }
+                </GAME>
         }
-        </WOMEN>
-        <MEN>
-        {
-            local:get-results($data, $game-name, 'M') 
+        </GAMES>
         }
-        </MEN>
-        </genders>
-        
     }
-    </game>

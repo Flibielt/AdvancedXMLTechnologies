@@ -28,9 +28,14 @@ return
                                 where $result?medal = 'G'
                                 return
                                     <GAME name="{$games?name}" year="{$game?year}">
-                                        <ATHLETE nationality="{$result?nationality}" gender="{$games?gender}">
-                                            { $result?name }
-                                        </ATHLETE>
+                                        {
+                                            if (fn:empty($result?name))
+                                            then <TEAM nationality="{$result?nationality}" gender="{$games?gender}"/>
+                                            else <ATHLETE nationality="{$result?nationality}" gender="{$games?gender}">
+                                                    { $result?name }
+                                                </ATHLETE>
+                                            
+                                        }
                                     </GAME>
                     }
                     </LOCATION>
